@@ -93,7 +93,7 @@ public class ArrayPractice {
             studentName = input.nextLine();
 
             if (!studentName.isEmpty()) {
-                System.out.println("Student Id:");
+                System.out.println(studentName + "'s Id:");
                 Integer studentId = input.nextInt();
                 students.put(studentId, studentName);
                 input.nextLine();
