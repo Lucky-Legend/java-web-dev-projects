@@ -11,6 +11,7 @@ public class countingCharacters {
         char[] charactersInString = hiddenFigs.toUpperCase().toCharArray();
         HashMap<Character, Integer> charMap = new HashMap<>();
         int counter = 0;
+
         for (char c : charactersInString) {
 
             if (charMap.containsKey(c)) {
@@ -24,5 +25,6 @@ public class countingCharacters {
         for (Map.Entry<Character, Integer> character : charMap.entrySet()) {
             System.out.println(character.getKey() + ": " + character.getValue());
         }
+        input.close();
     }
 }
