@@ -24,5 +24,6 @@ public class StringSearch {
 
         String alteredIntro = lowIntro.replace(lowTerm, "");
         System.out.println(alteredIntro);
+        input.close();
     }
 }

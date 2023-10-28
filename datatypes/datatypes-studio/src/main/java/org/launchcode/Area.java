@@ -19,5 +19,6 @@ public class Area {
         } else {
             System.out.println("Error: Invalid input.");
         }
+        input.close();
     }
 }

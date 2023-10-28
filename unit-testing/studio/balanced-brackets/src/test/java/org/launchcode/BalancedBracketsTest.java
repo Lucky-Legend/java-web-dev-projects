@@ -11,41 +11,45 @@ class BalancedBracketsTest {
     @Test
     public void validateStarts() { assertTrue(true); }
     @Test
-    public void onlyBracketsReturnsTrue() { assertTrue(BalancedBrackets.hasBalancedBrackets("[]")); }
+    public void onlyBracketsReturnsTrue() {
+        String message = "a single set of balanced brackets returns true";
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[]"), message);
+    }
     @Test
     public void threeBracketsReturnsFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("[]["));
+
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[]["), "three brackets returns false");
     }
     @Test
     public void fiveBracketsReturnsFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("[[[]["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[[[]["), "five brackets returns false");
     }
     @Test
     public void sevenBracketsReturnsFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("[[][][["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[[][][["), "seven brackets returns false");
     }
     @Test
     public void opposingBracketsReturnsFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]["), "opposing brackets returns false");
     }
     @Test
     public void doubleOpposingBracketsReturnFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("][]["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("][]["), "double opposing brackets returns false");
     }
     @Test
     public void messyBracketsReturnFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("[[]]][[]]"));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[[]]][[]]"), "extra closing bracket before opening bracket returns false");
     }
     @Test
     public void bracketsContainingWordsReturnsTrue() {
-        assertTrue(BalancedBrackets.hasBalancedBrackets("[something]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[something]"), "brackets containing letters returns true");
     }
     @Test
     public void bracketsContainingNumbersReturnsTrue() {
-        assertTrue(BalancedBrackets.hasBalancedBrackets("[123451234]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[123451234]"), "brackets containing numbers returns true");
     }
     @Test
     public void bracketsContainingSpacesReturnsTrue() {
-        assertTrue(BalancedBrackets.hasBalancedBrackets("[ ]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[   ]"), "brackets containing spaces returns true");
     }
 }
