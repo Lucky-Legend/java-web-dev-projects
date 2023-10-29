@@ -1,6 +1,7 @@
 package org.launchcode;
 
 public abstract class BaseDisc {
+
     private static int nextId = 1;
 
     private final int id;
